@@ -1,0 +1,72 @@
+<section>
+  <div class="container mt-3">
+    <h1>Profile</h1>
+    <div
+      style="display: flex;flex-direction: row;justify-content: space-around;"
+    >
+      {{#if user.profile }}
+
+        <div style="width: 20%;"><img
+            src="{{ user.profile }}"
+            width="200px"
+             height="200px"
+            class="rounded-circle mt-3 border"
+            alt=""
+          />
+          <a
+            href="/edit-profile-photo"
+            class="btn btn-primary mt-3"
+            style="width: 185px;"
+          >Edit Profile Picture</a>
+          <a href="/delete-profile-photo" class="btn btn-danger mt-3">Remove
+            Profile Picture</a>
+        </div>
+      {{else}}
+        <div style="width: 20%;"><img
+            src="https://www.weact.org/wp-content/uploads/2016/10/Blank-profile.png"
+            width="200px"
+            height="200px"
+            class="rounded-circle mt-3 border"
+            alt=""
+          />
+          <a href="/edit-profile-photo"   style="width: 185px;" class="btn btn-primary mt-3">Set
+            Profile Picture</a>
+        </div>
+      {{/if}}
+      <div style="width: 75%;margin-top: 100px;"><h1>{{user.name}}</h1>
+        <p>{{user.username}}</p>
+        <div class="mt-3">
+          <a
+            href="/order"
+            class="border border-2 border-primary rounded p-2 text-dark"
+            style="text-decoration: none;font-weight: bold;"
+          >Your Orders</a>
+          <a
+            href="/deliveries-list"
+            class="border border-2 border-primary rounded p-2 text-dark"
+            style="text-decoration: none;font-weight: bold;"
+          >Deliveries</a>
+          <a
+            href="/cart"
+            class="border border-2 border-primary rounded p-2 text-dark"
+            style="text-decoration: none;font-weight: bold;"
+          >Your Cart
+            <span
+              class="badge bg-primary"
+              id="cart-count"
+            >{{cartCount}}</span></a>
+          <a
+            href="/edit-user-profile"
+            class="border border-2 border-primary rounded p-2 text-dark"
+            style="text-decoration: none;font-weight: bold;"
+          >Edit Profile</a>
+          <a
+            href="/remove-account"
+            class="border border-2 border-primary rounded p-2 text-dark"
+            style="text-decoration: none;font-weight: bold;"
+          >Remove Account</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

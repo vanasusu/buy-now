@@ -1,0 +1,62 @@
+<section>
+  <div class="container mt-4">
+    <div class="row">
+      <div class="col-md-6">
+        <h2 class="text-center">Add Product</h2>
+        <form
+          action="/admin/add-product"
+          enctype="multipart/form-data"
+          method="post"
+        >
+          <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" id="name" name="name" class="form-control" required />
+          </div>
+          <div class="mb-3">
+            <label for="category" class="form-label">Category</label>
+            <input type="text" id="category" class="form-control" name="category" required />
+          </div>
+          <div class="mb-3">
+            <label for="price" class="form-label">Price</label>
+            <input type="number" id="price" class="form-control" name="price" required />
+          </div>
+          <div class="mb-3">
+            <label for="description" class="form-label">Description</label>
+            <input
+              type="text"
+              id="description"
+              class="form-control"
+              name="description"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <label for="" class="form-label">Image</label>
+            <img
+              src=""
+              class="rounded m-3"
+              style="width: 100px;height: auto;opacity: 0;"
+              alt=""
+              id="viewImg"
+            />
+            <input
+              type="file"
+              accept="image/*"
+              name="image"
+              class="form-control"
+              onchange="{image
+              View()}"
+              required
+            />
+          </div>
+          <button type="submit" class="btn btn-primary mt-5">Add</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+<script>
+  function imageView(){
+  document.getElementById('viewImg').src=URL.createObjectURL(event.target.files[0])
+  document.getElementById('viewImg').style.opacity=1 }
+</script>

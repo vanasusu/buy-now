@@ -1,0 +1,31 @@
+<section>
+    <div class="container">
+        {{#if orders}}
+        <h3 class="text-center mt-3">Your Orders</h3>
+    {{#each orders}}
+    <div onmouseover="orderChecking('{{this.order_status}}','{{this.id}}')" id="{{this.id}}qq" class="border border-5 rounded mt-5 mb-5">
+        <div class="container m-3">
+            <h6 class="card-text">Date: {{this.created_at}}</h6>
+            <h6 class="card-text">Mobile: {{this.delivery_mobileNumber}}</h6>
+            <h6 class="card-text">Address: {{this.delivery_address}}</h6>
+            <h6 class="card-text">Pincode: {{this.delivery_pinCode}}</h6>
+            <h6 class="cart-text">Payment: {{this.mode_of_payment}}</h6>
+            <h6 class="card-text">Status: {{this.order_status}}</h6>
+            <p id="{{this.id}}r" >Your refund will get after some days</p> 
+            <button id="{{this.id}}rb" onclick="gotRefund('{{this.id}}')" class="btn btn-primary" >
+                Yes i got refund</button>
+            <a class="btn btn-primary" href="/order-details/{{this.id}}">View_Products</a>
+            <button class="btn btn-primary" onclick="cancelOrder('{{this.id}}','{{this.mode_of_payment}}','{{this.order_status}}')" id="{{this.id}}c" >
+                Cancel Order</button>
+            <button class="btn btn-primary" 
+            id="{{this.id}}y" onclick="delivered('{{this.id}}')" >You got it</button>
+            <a class="btn btn-primary" id="{{this.id}}pp" href="/pay-due/{{this.id}}" >Pay here</a>
+            <h3 class="cart-text float-end me-5">Total: ₹{{this.total}}</h6>
+        </div>
+    </div>
+    {{/each}}
+    {{else}}
+<h3 class="text-center mt-3">There is no orders</h3>
+{{/if}}
+    </div>
+</section>

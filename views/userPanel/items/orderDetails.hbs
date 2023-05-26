@@ -1,0 +1,35 @@
+<section>
+  <div class="container mt-5">
+    {{!-- <div class=""> --}}
+       <p class="my-2 px-4" style="font-weight: bold;font-size:21px;">Order #{{id}}</p>
+    {{!-- </div> --}}
+   
+    <div class="row">
+      {{#each products}}
+        <div class="col-md-3 p-5 scale">
+
+          <div class="card" style="height: 26rem;" >
+             <img class="rounded scale" style="height: 18rem;overflow-y: hidden;"
+              src="{{this.image}}"
+              alt="{{this.category}}"
+              class="rounded scale"
+            />
+            <div class="card-body">
+              <h5 class="card-title">{{this.name}}</h5>
+ <p
+                class="card-text"
+                style="height: 2rem;overflow-y:hidden;margin:0"
+              >Quantity : {{this.quantity}}</p>
+              <p
+                class="card-text"
+                style="height: 2rem;overflow-y:hidden;"
+              >Price : {{this.price}}</p>
+            {{!-- </div> --}}
+              </div>
+             
+          </div>
+        </div>
+      {{/each}}
+    </div>
+  </div>
+</section>

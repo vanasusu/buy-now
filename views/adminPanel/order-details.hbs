@@ -1,0 +1,32 @@
+<section>
+  <div class="container mt-5">
+    <h3>User Details</h3>
+    <p>Name: {{user.name}}</p>
+    <p>Email: {{user.email}}</p>
+    <div class="row">
+      <h3 class="mt-5">Products</h3>
+      {{#each products}}
+        <div class="col-md-4 scale">
+          <div class="card mb-5" style="width: 15rem;height: 26rem;">
+            <img
+              src={{this.image}}
+              style="height: 15rem;overflow-y: hidden;"
+              class="card-img-top rounded scale"
+              alt=""
+            />
+            <div class="card-body">
+              <h5 class="card-title">{{this.name}}</h5>
+              <p class="card-text">₹{{this.price}}</p>
+              <p class="card-text">Quantity : {{this.quantity}}</p>
+              <a
+                href="/admin/product/{{this.id}}"
+                class="btn btn-primary scale"
+              >View product</a>
+            </div>
+          </div>
+        </div>
+
+      {{/each}}
+    </div>
+  </div>
+</section>

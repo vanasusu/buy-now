@@ -1,0 +1,26 @@
+ <section>
+  <div class="container mt-5">
+    <div class="row">
+      {{#each products}}
+        <div class="col-md-3 py-5 scale"  >
+          <div class="card" style="height: 26rem;" >
+             <img class="rounded scale" style="height: 18rem;overflow-y: hidden;" src="{{this.image}}" alt="">
+            <div class="card-body">
+              <a style="text-decoration: none;font-size: 17px;" href="/item/{{this.id}}" style=" -webkit-box-orient: vertical;overflow: hidden;display: -webkit-box;-webkit-line-clamp: 2;line-clamp: 2;" class="card-title text-dark">{{this.name}}</a>
+              <p class="card-text my-2" style="height: 2rem;overflow-y:hidden;font-weight:bold;">₹{{this.price}}</p>
+             
+              {{!-- <div style="display:flex; flex-direction:row;justify-content:space-around">
+
+              </div>
+               --}}
+            </div>
+             <div class="card-footer" style="border-top: none;background-color:transparent;padding:6px ; display:flex;justify-content:space-around;padding-bottom: 10px;">
+ <button onclick={addToCart('{{this.id}}')} class="btn btn-primary scale" style="margin-right:6px;">Add to cart</button>
+              <a href="/buy/{{this.name}}/{{this.id}}"  class="btn flex-1 btn-primary scale float-end" style="margin-left:6px;">Buy Now</a>
+</div>
+          </div>
+        </div>
+      {{/each}}
+    </div>
+  </div>
+</section>

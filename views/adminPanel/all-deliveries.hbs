@@ -1,0 +1,21 @@
+<section>
+    <div class="container">
+        {{#if delivery}}
+           {{#each delivery}} 
+    <div class="border border-5 rounded mt-5 mb-5">
+        <div class="container m-3">
+            <h6 class="card-text">Delivery Date: {{this.created_at}}</h6>
+            <h6 class="card-text">Mobile: {{this.delivery_mobileNumber}}</h6>
+            <h6 class="card-text">Address: {{this.delivery_address}}</h6>
+            <h6 class="card-text">Pincode: {{this.delivery_pinCode}}</h6>
+            <h6 class="cart-text">Payment: {{this.mode_of_payment}}</h6>
+            <h6 class="card-text">Status: {{this.order_status}}</h6>
+            <h3 class="cart-text">Total: ₹{{this.total}}</h6>
+        </div>
+    </div>
+    {{/each}}
+    {{else}}
+<h3 class="text-center mt-3">There are no Deliveries</h3>
+    {{/if}}
+    </div>
+</section>

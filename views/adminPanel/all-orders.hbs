@@ -1,0 +1,26 @@
+<section>
+    <div class="container">
+    {{#if orders}}
+        <h3 class="text-center mt-3">All Orders</h3>
+    {{#each orders}}
+    <div class="border border-5 rounded mt-5 mb-5" onmouseover="adminOrderChecking('{{this.order_status}}','{{this.id}}')" >
+        <div class="container m-3">
+            <h6 class="card-text">Date: {{this.created_at}}</h6>
+            <h6 class="card-text">Mobile: {{this.delivery_mobileNumber}}</h6>
+            <h6 class="card-text">Address: {{this.delivery_address}}</h6>
+            <h6 class="card-text">Pincode: {{this.delivery_pinCode}}</h6>
+            <h6 class="cart-text">Payment: {{this.mode_of_payment}}</h6>
+            <h6 class="cart-text">Status: {{this.order_status}}</h6>
+            <a href="/admin/order-details/{{this.id}}/{{this.user_id}}" class="btn btn-success" >View More details</a>
+            <button onclick="shipped('{{this.id}}')" id="{{this.id}}as" class="btn btn-success" >Make it Shipped</button>
+            <button onclick="cancelShipped('{{this.id}}')" id="{{this.id}}acs" class="btn btn-success" >Cancel Shipped</button>
+            <button onclick="refunded('{{this.id}}')" id="{{this.id}}ar" class="btn btn-success" >Refunded</button>
+            <h3 class="cart-text float-end me-5">Total: ₹{{this.total}}</h6>
+        </div>
+    </div>
+    {{/each}}
+    {{else}}
+<h3 class="text-center mt-3">There is no orders existing</h3>
+    {{/if}}
+    </div>
+</section>

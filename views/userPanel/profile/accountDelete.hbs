@@ -1,0 +1,53 @@
+<section>
+  <div class="container mt-5">
+    <h3 class="text-center">Remove Your Account</h3>
+    <form action="/remove-account" class="col-md-6 mt-3">
+      <div class="form-group">
+        <h6>Why You are remove your account?</h6>
+        <input
+          type="radio"
+          name="why"
+          value="Our service is not favorable for you"
+        />
+        <label for="why">Our service is not favorable for you</label><br />
+        <input
+          type="radio"
+          name="why"
+          value="Our service is not favorable for you"
+        />
+        <label for="why">You are not secure in your our session</label><br />
+        <input
+          type="radio"
+          name="why"
+          value="Our service is not favorable for you"
+        />
+        <label for="why">You got an error</label><br />
+        <input
+          type="radio"
+          name="why"
+          value="Our service is not favorable for you"
+        />
+        <label for="why">Other</label>
+      </div>
+    </form>
+    <form id="delete-account" class="col-md-4 mt-3">
+      <p>If you remove your account you can't recover it again</p>
+      <h6>{{user.username}}</h6>
+      <input
+        type="password"
+        name="password"
+        class="form-control mt-3"
+        placeholder="Enter your password"
+        required
+      />
+      <div class="col-6 mt-3" style="display: flex;">
+              <input
+                type="Submit"
+                class="btn btn-primary"
+                style="width: 100px;"
+                value="Remove"
+      />
+            </div>
+    </form>
+  </div>
+</section>

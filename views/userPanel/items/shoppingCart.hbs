@@ -1,0 +1,46 @@
+<section>
+  <div class="container">
+    {{#if carts}}
+      <table class="table mt-5">
+        <thead>
+          <tr>
+            <th scope="col">Items</th>
+            <th scope="col">Title</th>
+            <th scope="col">Quantity</th>
+            <th scope="col">Price</th>
+          </tr>
+        </thead>
+        {{#each carts}}
+          <tbody>
+            <tr>
+              <td><img
+                  src="{{this.image}}"
+                  style="width: 50px;height: auto;"
+                  alt=""
+                /></td>
+              <td>{{this.name}}</td>
+              <td><button class="cart-item-count btn btn-primary mr-3" onclick="changeQuantity('{{this.id}}','{{this.product_id}}',1,'{{this.user_id}}')" style="width: 40px;margin-right: 10px;">+</button>
+              <span id="{{this.product_id}}"
+                >{{this.quantity}}</span><button
+                  class="cart-item-count btn btn-primary"
+                  onclick="changeQuantity('{{this.id}}','{{this.product_id}}',-1,'{{this.user_id}}')"
+                  style="width: 40px;margin-left: 10px;" id="decrease"
+                >-</button></td>
+              <td>₹{{this.price}}</td>
+              <td><a
+                  href="/remove-cart-item/{{this.product_id}}"
+                  class="btn btn-danger"
+                >Remove</a></td>
+            </tr>
+          </tbody>
+        {{/each}}
+      </table>
+      <div class="float-end me-5">
+      <h5>Total : <span id="total" >₹{{total}}</span></h5>
+      <a href="/confirm-order" class="btn btn-primary" style="width: 200px;">Place Order</a>
+      </div>
+    {{else}}
+      <h1 class="text-center">Cart is empty</h1>
+    {{/if}}
+  </div>
+</section>

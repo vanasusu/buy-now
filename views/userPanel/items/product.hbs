@@ -27,7 +27,7 @@
       <div class="col-md-6 mt-5">
         <h5>{{productitem.name}}</h5>
         <p class="mb-2 text-muted text-uppercase small">{{productitem.category}}</p>
-        <p><span class="mr-1"><strong>₹{{productitem.price}}</strong></span></p>
+        <p><span class="mr-1"><strong>${{productitem.price}}</strong></span></p>
         <p class="pt-1">{{productitem.description}}</p>
         <hr />
         <button type="button" style="margin-right: 20px;" onclick={addToCart('{{productitem.id}}')} class="btn btn-primary scale">Add to Cart</button>

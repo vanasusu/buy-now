@@ -325,7 +325,7 @@ router.post("/create-checkout-session", verifyLogin, async (req, res) => {
       line_items: [
         {
           price_data: {
-            currency: "INR",
+            currency: "USD",
             product_data: {
               name: "#" + req.body.id,
             },

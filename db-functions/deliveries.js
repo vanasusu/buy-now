@@ -1,6 +1,4 @@
 var knex = require("../knex/knex");
-var bcrypt = require("bcrypt");
-const e = require("express");
 
 module.exports = {
   delivering: (orderId) => {

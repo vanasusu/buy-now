@@ -1,4 +1,4 @@
-var knex = require("../knex/knex");
+let knex = require("../knex/knex");
 
 const bcrypt = require("bcrypt");
 module.exports = {

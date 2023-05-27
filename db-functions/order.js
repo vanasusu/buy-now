@@ -1,5 +1,4 @@
 var knex = require("../knex/knex");
-var bcrypt = require("bcrypt");
 
 module.exports = {
   placeOrder: (order, products, total) => {

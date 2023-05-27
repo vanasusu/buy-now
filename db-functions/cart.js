@@ -1,4 +1,4 @@
-var knex = require("../knex/knex");
+let knex = require("../knex/knex");
 
 module.exports = {
   addToCart: (proId, userId) => {

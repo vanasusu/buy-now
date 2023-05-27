@@ -1,6 +1,5 @@
 let knex = require("../knex/knex");
 let bcrypt = require("bcrypt");
-const e = require("express");
 
 module.exports = {
   doSignup: (userData) => {

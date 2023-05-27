@@ -1,5 +1,5 @@
-var knex = require("../knex/knex");
-var bcrypt = require("bcrypt");
+let knex = require("../knex/knex");
+let bcrypt = require("bcrypt");
 const e = require("express");
 
 module.exports = {

@@ -1,12 +1,11 @@
-var express = require("express");
+let express = require("express");
 const product = require("../db-functions/product");
-var router = express.Router();
-var userHelpers = require("../db-functions/user");
-var cartHelpers = require("../db-functions/cart");
-var orderHelpers = require("../db-functions/order");
-var cloudinary = require("../uploader_cloudinary").v2;
-var uploader = require("../uploader_multer");
-var knex_populate = require("knex-populate");
+let router = express.Router();
+let userHelpers = require("../db-functions/user");
+let cartHelpers = require("../db-functions/cart");
+let orderHelpers = require("../db-functions/order");
+let cloudinary = require("../uploader_cloudinary").v2;
+let uploader = require("../uploader_multer");
 const deliveries = require("../db-functions/deliveries");
 const { STRIPE_SECRET_KEY } = require("../keys");
 const {

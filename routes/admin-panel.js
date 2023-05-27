@@ -1,10 +1,10 @@
-var express = require("express");
+let express = require("express");
 const admin = require("../db-functions/admin");
-var router = express.Router();
-var productHelpers = require("../db-functions/product");
-const { signupform, loginform, addproduct } = require("../forms/admin-form");
-var cloudinary = require("../uploader_cloudinary").v2;
-var uploader = require("../uploader_multer");
+let router = express.Router();
+let productHelpers = require("../db-functions/product");
+const { signupform, loginform } = require("../forms/admin-form");
+let cloudinary = require("../uploader_cloudinary").v2;
+let uploader = require("../uploader_multer");
 
 const verifyLogin = (req, res, next) => {
   if (req.session.adminLoggedIn) {

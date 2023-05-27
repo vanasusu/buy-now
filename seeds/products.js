@@ -13,7 +13,7 @@ exports.seed = async function (knex) {
       description:
         "Dual Time Display, Timer, Stop Watch, Light Up, Water Resistance, World Time",
       image: "https://m.media-amazon.com/images/I/61CUIlQYlqL._UX679_.jpg",
-      price: 20000
+      price: 2000
     },
     {
       id: 2,
@@ -22,7 +22,7 @@ exports.seed = async function (knex) {
       description:
         "Arch Support, Dynamic Feet Support, On-Ground Stability, Soft-Cushioned Insole, Shock Absorption,",
       image: "https://m.media-amazon.com/images/I/61XlZcGOY9L._UY575_.jpg",
-      price: 2000,
+      price: 120,
     },
     {
       id: 3,
@@ -31,7 +31,7 @@ exports.seed = async function (knex) {
       description:
         "15.6\" (39.62 cm) FHD (1920x1080) Antiglare 250 Nits Thin and Light Laptop (8GB RAM/256GB SSD/Windows 11 Home/Black/1Y Onsite/1.7 kg), 82QYA00MIN",
       image: "https://m.media-amazon.com/images/I/31uLEZHhMDL._SX569_.jpg",
-      price: 30000,
+      price: 3000,
     },
     {
       id: 4,
@@ -49,7 +49,16 @@ exports.seed = async function (knex) {
       description:
         "Semi-automatic top-loading washing machine: Economical, Low water and energy consumption, involves manual effort; Has both washing and drying functions",
       image: "https://m.media-amazon.com/images/I/61WwvcMuFTL._SX466_.jpg",
-      price: 12000,
+      price: 900,
+    },
+    {
+      id: 6,
+      name: "Nikon DSLR",
+      category:"Camera",
+      description:
+        "20.9MP Digital SLR Camera (Black) with AF-S DX NIKKOR 18-140mm f/3.5-5.6G ED VR Lens",
+      image: "https://m.media-amazon.com/images/I/613pf1JTs9L._SX679_.jpg",
+      price: 400,
     },
   ]);
 };
